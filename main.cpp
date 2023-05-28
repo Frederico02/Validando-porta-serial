@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 
+
 int main() {
     HANDLE hSerial;
     DCB dcbSerialParams = { 0 };
