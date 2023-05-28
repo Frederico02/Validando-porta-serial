@@ -1,5 +1,6 @@
 #pip install pyserial
 
+
 import serial
 
 # Configurações da porta COM
