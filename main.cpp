@@ -7,10 +7,10 @@ int main() {
     COMMTIMEOUTS timeouts = { 0 };
 
     // Configurações da porta COM
-    LPCWSTR portName = L"COM1";  // Defina a porta COM correta para a sua balança
+    LPCSTR portName = "COM1";  // Defina a porta COM correta para a sua balança
 
     // Abre a porta serial
-    hSerial = CreateFile(portName, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+    hSerial = CreateFileA(portName, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (hSerial == INVALID_HANDLE_VALUE) {
         std::cout << "Falha ao abrir a porta serial." << std::endl;
         return 1;
